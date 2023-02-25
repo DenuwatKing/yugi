@@ -1,12 +1,11 @@
 <template>
     <div>
-        
-        <b-overlay @click="onclickCard" :show="show" rounded="sm" class="text-center justify-content-center">
+        <b-overlay @click="onclickCard" :show="show" rounded="sm" class="text-center">
             <template #overlay>
                 <div> 
                 </div>
             </template>
-            <img class="showcenter " :src="imageCardUrl" alt="">
+            <img class="showcenter" :src="imageCardUrl" alt="">
             <b-container class="bv-example-row">
                 <b-row  class="my-2">
                     <b-col v-for="item in items" :key="item.card_images" class="my-2">
@@ -93,7 +92,7 @@ export default {
 
 .showcenter  {
     z-index: 9999;
-    transform: translate(-50%, -50%);
-    position: absolute;
+    transform: translate(-50%, 0%);
+    position: fixed;
 }
 </style>
